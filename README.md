@@ -6,6 +6,31 @@ Construido como una Single Page Application (SPA) en **HTML5, Tailwind CSS y Jav
 
 ---
 
+## 📸 Capturas de Pantalla
+
+### Vista Mensual (Trading P&L Calendar)
+Calendario interactivo de lunes a viernes con celdas diferenciadas por colores pastel para ganancias y pérdidas, conteo de trades y la etiqueta dinámica **Today** en el día actual:
+
+<p align="center">
+  <img src="screenshots/calendar-month.png" alt="Vista Mensual del Calendario" width="580" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+</p>
+
+### Vista Anual (12 Meses)
+Resumen consolidado de enero a diciembre con el cálculo acumulado en tiempo real del P&L neto y volumen de operaciones por mes:
+
+<p align="center">
+  <img src="screenshots/calendar-year.png" alt="Vista Anual de 12 Meses" width="580" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+</p>
+
+### Detalle de Operaciones & Métricas por Contrato
+Desglose financiero por operación: número de contratos (`Qty`), `Strike`, tipo (`CALL/PUT`), expiración calculada (`0DTE`, `1DTE`), valor de compra unitario, precio de venta y retorno porcentual (`ROI %`):
+
+<p align="center">
+  <img src="screenshots/trade-details.png" alt="Detalle de Operaciones" width="580" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+</p>
+
+---
+
 ## 🚀 Características Principales
 
 - **Calendario Dinámico (Lunes a Viernes):**
@@ -15,7 +40,7 @@ Construido como una Single Page Application (SPA) en **HTML5, Tailwind CSS y Jav
   - Conteo de operaciones cerradas en la esquina superior de cada día (`1 trade`, `2 trades`, etc.).
 - **Compatibilidad Nativa con Charles Schwab / Thinkorswim:**
   - Importador inteligente de archivos CSV (`GainLoss_Realized_Details.csv`).
-  - Detección automática del encabezado ignorando filas de metadatos.
+  - Detección automática del encabezado ignorando filas de metadatos del broker.
   - Modo **Fusión inteligente:** suma nuevos reportes sin sobreescribir los datos previos ni duplicar registros.
 - **Desglose de Opciones Financieras:**
   - Extracción de **Ticker**, **Strike limpio** (sin `$`), tipo (**CALL / PUT**) y número de contratos (**Qty**).
@@ -27,8 +52,6 @@ Construido como una Single Page Application (SPA) en **HTML5, Tailwind CSS y Jav
     $$\text{Relación G/P} = \frac{\text{Ganancias Brutas}}{\text{Ganancias Brutas} + \vert{}\text{Pérdidas Brutas}\vert{}} \times 100$$
   - Desglose de Ganancias Brutas (`+$$$`) y Pérdidas Brutas (`-$$$`).
   - Tasa de acierto de trades (`Win Rate %`).
-- **Resumen Anual (12 Meses):**
-  - Tarjetas de enero a diciembre con el P&L acumulado y el número total de trades por mes.
 - **Pestaña de Tickers (Compañías):**
   - Resumen por activo (`SPY`, `TSLA`, `AMD`, `NVDA`, `QQQ`).
   - Total invertido, Win Rate por empresa y modal para inspeccionar el historial individual de cada símbolo.
@@ -65,14 +88,14 @@ El analizador está preparado para reportes de ganancias realizadas de brokers (
 
 ## 💻 Instalación y Despliegue en GitHub Pages
 
-### Paso 1: Clonar o crear el repositorio
+### Paso 1: Subir archivos a GitHub
 1. Crea un nuevo repositorio en tu cuenta de GitHub (por ejemplo, `trading-pnl-calendar`).
-2. Sube los archivos `index.html` y `README.md`.
+2. Sube el archivo `index.html`, `README.md` y la carpeta `screenshots/` con tus imágenes.
 
 ```bash
 git init
 git add .
-git commit -m "Initial commit: P&L Trading Calendar"
+git commit -m "feat: Add P&L Trading Calendar with screenshots"
 git branch -M main
 git remote add origin [https://github.com/TU-USUARIO/trading-pnl-calendar.git](https://github.com/TU-USUARIO/trading-pnl-calendar.git)
 git push -u origin main
