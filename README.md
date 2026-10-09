@@ -110,15 +110,7 @@ El analizador está preparado para reportes de ganancias realizadas de brokers (
 
 ---
 
-## 💻 Instalación y Despliegue en GitHub Pages
 
-### Paso 1: Subir archivos a GitHub
-1. Clona o inicializa tu repositorio local:
-2. Agrega la carpeta `screenshots/` con las 4 imágenes:
-   - `calendar-month.png`
-   - `tickers-summary.png` *(captura de la pestaña Tickers)*
-   - `calendar-year.png`
-   - `trade-details.png`
 
 ```bash
 git init
