@@ -108,14 +108,4 @@ El analizador está preparado para reportes de ganancias realizadas de brokers (
 | `Proceeds` | Monto total recibido al cerrar la posición |
 | `Gain/Loss ($)` | Ganancia o pérdida neta |
 
----
 
-
-
-```bash
-git init
-git add .
-git commit -m "feat: Add P&L Trading Calendar with ticker analytics"
-git branch -M main
-git remote add origin [https://github.com/TU-USUARIO/trading-pnl-calendar.git](https://github.com/TU-USUARIO/trading-pnl-calendar.git)
-git push -u origin main
